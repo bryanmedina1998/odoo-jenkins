@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('Building') {
+      steps {
+        sh 'ansible all -i hosts -m ping -f 5'
+      }
+    }
+
   }
 }
